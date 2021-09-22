@@ -32,7 +32,7 @@ const operationTabList = [
     key: 'projects',
     tab: (
       <span>
-        项目 <span style={{ fontSize: 14 }}>(8)</span>
+        Project <span style={{ fontSize: 14 }}>(8)</span>
       </span>
     ),
   },

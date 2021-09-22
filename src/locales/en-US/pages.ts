@@ -20,7 +20,7 @@ export default {
   'pages.getCaptchaSecondText': 'sec(s)',
   'pages.login.rememberMe': 'Remember me',
   'pages.login.forgotPassword': 'Forgot Password ?',
-  'pages.login.submit': 'Login',
+  'pages.login.submit': 'Sign In',
   'pages.login.loginWith': 'Login with :',
   'pages.login.registerAccount': 'Register Account',
   'pages.welcome.advancedComponent': 'Advanced Component',

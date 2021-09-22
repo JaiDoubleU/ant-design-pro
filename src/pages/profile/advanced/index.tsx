@@ -101,7 +101,9 @@ const description = (
           <a href="">12421</a>
         </Descriptions.Item>
         <Descriptions.Item label="Effective Date">2017-07-07 ~ 2017-08-08</Descriptions.Item>
-        <Descriptions.Item label="Remarks">Please confirm within two working days</Descriptions.Item>
+        <Descriptions.Item label="Remarks">
+          Please confirm within two working days
+        </Descriptions.Item>
       </Descriptions>
     )}
   </RouteContext.Consumer>
@@ -286,7 +288,7 @@ const Advanced: FC = () => {
           </Card>
           <Card title="User Info" style={{ marginBottom: 24 }} bordered={false}>
             <Descriptions style={{ marginBottom: 24 }}>
-              <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
+              <Descriptions.Item label="Username">付小小</Descriptions.Item>
               <Descriptions.Item label="会员卡号">32943898021309809423</Descriptions.Item>
               <Descriptions.Item label="身份证">3321944288191034921</Descriptions.Item>
               <Descriptions.Item label="联系方式">18112345678</Descriptions.Item>

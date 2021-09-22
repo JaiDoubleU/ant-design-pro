@@ -250,7 +250,7 @@ const Register: FC = () => {
                 },
               ]}
             >
-              <Input size="large" placeholder="验证码" />
+              <Input size="large" placeholder="Verification code" />
             </FormItem>
           </Col>
           <Col span={8}>
@@ -260,7 +260,7 @@ const Register: FC = () => {
               className={styles.getCaptcha}
               onClick={onGetCaptcha}
             >
-              {count ? `${count} s` : '获取验证码'}
+              {count ? `${count} s` : 'get verification code'}
             </Button>
           </Col>
         </Row>
@@ -272,10 +272,10 @@ const Register: FC = () => {
             type="primary"
             htmlType="submit"
           >
-            <span>注册</span>
+            <span>Register</span>
           </Button>
           <Link className={styles.login} to="/user/login">
-            <span>使用已有账户登录</span>
+            <span>Log in with an existing account</span>
           </Link>
         </FormItem>
       </Form>

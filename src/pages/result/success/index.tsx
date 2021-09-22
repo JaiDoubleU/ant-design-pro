@@ -31,7 +31,7 @@ const desc2 = (
 
 const content = (
   <>
-    <Descriptions title="项目名称">
+    <Descriptions title="Project Name">
       <Descriptions.Item label="项目 ID">23421</Descriptions.Item>
       <Descriptions.Item label="负责人">曲丽丽</Descriptions.Item>
       <Descriptions.Item label="生效时间">2016-12-12 ~ 2017-12-12</Descriptions.Item>

@@ -2,7 +2,7 @@ export default {
   'menu.welcome': '歡迎',
   'menu.more-blocks': '更多區塊',
   'menu.home': '首頁',
-  'menu.login': '登錄',
+  'menu.login': 'Sign In',
   'menu.admin': '权限',
   'menu.admin.sub-page': '二级管理页',
   'menu.exception.403': '403',

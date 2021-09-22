@@ -151,12 +151,12 @@ const Basic: FC = () => {
           <Descriptions.Item label="Pickup Single number">1000000000</Descriptions.Item>
           <Descriptions.Item label="State">已Pick up</Descriptions.Item>
           <Descriptions.Item label="销售Single number">1234123421</Descriptions.Item>
-          <Descriptions.Item label="子订单">3214321432</Descriptions.Item>
+          <Descriptions.Item label="Sub-order">3214321432</Descriptions.Item>
         </Descriptions>
         <Divider style={{ marginBottom: 32 }} />
         <Descriptions title="User Info" style={{ marginBottom: 32 }}>
-          <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
-          <Descriptions.Item label="联系电话">18100000000</Descriptions.Item>
+          <Descriptions.Item label="Username">付小小</Descriptions.Item>
+          <Descriptions.Item label="Contact Number">18100000000</Descriptions.Item>
           <Descriptions.Item label="常用快递">菜鸟仓储</Descriptions.Item>
           <Descriptions.Item label="Pickup Address">浙江省杭州市西湖区万塘路18号</Descriptions.Item>
           <Descriptions.Item label="Remarks">无</Descriptions.Item>

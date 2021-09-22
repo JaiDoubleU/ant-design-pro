@@ -209,11 +209,11 @@ const BaseView: React.FC = () => {
               />
               <ProFormFieldSet
                 name="phone"
-                label="联系电话"
+                label="Contact Number"
                 rules={[
                   {
                     required: true,
-                    message: '请输入您的联系电话!',
+                    message: '请输入您的Contact Number!',
                   },
                   { validator: validatorPhone },
                 ]}
