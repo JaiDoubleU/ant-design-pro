@@ -41,7 +41,7 @@ const content = (
       <Step title={<span style={{ fontSize: 14 }}>创建项目</span>} description={desc1} />
       <Step title={<span style={{ fontSize: 14 }}>部门初审</span>} description={desc2} />
       <Step title={<span style={{ fontSize: 14 }}>财务复核</span>} />
-      <Step title={<span style={{ fontSize: 14 }}>完成</span>} />
+      <Step title={<span style={{ fontSize: 14 }}>Finish</span>} />
     </Steps>
   </>
 );
@@ -60,7 +60,7 @@ export default () => (
       <Result
         status="success"
         title="提交成功"
-        subTitle="提交结果页用于反馈一系列操作任务的处理结果， 如果仅是简单操作，使用 Message 全局提示反馈即可。 本文字区域可以展示简单的补充说明，如果有类似展示 “单据”的需求，下面这个灰色区域可以呈现比较复杂的内容。"
+        subTitle="The submission result page is used to feed back the processing results of a series of operation tasks. If it is only a simple operation, use the Message global prompt to give feedback. This text area can display simple supplementary instructions. If there is a similar need to display documents, the following gray area can present more complex content."
         extra={extra}
         style={{ marginBottom: 16 }}
       >

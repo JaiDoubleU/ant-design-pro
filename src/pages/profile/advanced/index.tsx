@@ -85,8 +85,8 @@ const action = (
 
 const extra = (
   <div className={styles.moreInfo}>
-    <Statistic title="状态" value="待审批" />
-    <Statistic title="订单金额" value={568.08} prefix="¥" />
+    <Statistic title="State" value="Pending" />
+    <Statistic title="订单金额" value={568.08} prefix="$" />
   </div>
 );
 
@@ -95,13 +95,13 @@ const description = (
     {({ isMobile }) => (
       <Descriptions className={styles.headerList} size="small" column={isMobile ? 1 : 2}>
         <Descriptions.Item label="创建人">曲丽丽</Descriptions.Item>
-        <Descriptions.Item label="订购产品">XX 服务</Descriptions.Item>
-        <Descriptions.Item label="创建时间">2017-07-07</Descriptions.Item>
-        <Descriptions.Item label="关联单据">
+        <Descriptions.Item label="Ordering Products">XX Service</Descriptions.Item>
+        <Descriptions.Item label="Creation Time">2017-07-07</Descriptions.Item>
+        <Descriptions.Item label="Associated Documents">
           <a href="">12421</a>
         </Descriptions.Item>
-        <Descriptions.Item label="生效日期">2017-07-07 ~ 2017-08-08</Descriptions.Item>
-        <Descriptions.Item label="备注">请于两个工作日内确认</Descriptions.Item>
+        <Descriptions.Item label="Effective Date">2017-07-07 ~ 2017-08-08</Descriptions.Item>
+        <Descriptions.Item label="Remarks">Please confirm within two working days</Descriptions.Item>
       </Descriptions>
     )}
   </RouteContext.Consumer>
@@ -155,15 +155,15 @@ const customDot = (dot: React.ReactNode, { status }: { status: string }) => {
 const operationTabList = [
   {
     key: 'tab1',
-    tab: '操作日志一',
+    tab: '操作Day志一',
   },
   {
     key: 'tab2',
-    tab: '操作日志二',
+    tab: '操作Day志二',
   },
   {
     key: 'tab3',
-    tab: '操作日志三',
+    tab: '操作Day志三',
   },
 ];
 
@@ -195,7 +195,7 @@ const columns = [
     key: 'updatedAt',
   },
   {
-    title: '备注',
+    title: 'Remarks',
     dataIndex: 'memo',
     key: 'memo',
   },
@@ -248,7 +248,7 @@ const Advanced: FC = () => {
 
   return (
     <PageContainer
-      title="单号：234231029431"
+      title="Single number：234231029431"
       extra={action}
       className={styles.pageHeader}
       content={description}
@@ -258,17 +258,17 @@ const Advanced: FC = () => {
       tabList={[
         {
           key: 'detail',
-          tab: '详情',
+          tab: 'Details',
         },
         {
           key: 'rule',
-          tab: '规则',
+          tab: 'Rule',
         },
       ]}
     >
       <div className={styles.main}>
         <GridContent>
-          <Card title="流程进度" style={{ marginBottom: 24 }}>
+          <Card title="Process Progress" style={{ marginBottom: 24 }}>
             <RouteContext.Consumer>
               {({ isMobile }) => (
                 <Steps
@@ -279,19 +279,19 @@ const Advanced: FC = () => {
                   <Step title="创建项目" description={desc1} />
                   <Step title="部门初审" description={desc2} />
                   <Step title="财务复核" />
-                  <Step title="完成" />
+                  <Step title="Finish" />
                 </Steps>
               )}
             </RouteContext.Consumer>
           </Card>
-          <Card title="用户信息" style={{ marginBottom: 24 }} bordered={false}>
+          <Card title="User Info" style={{ marginBottom: 24 }} bordered={false}>
             <Descriptions style={{ marginBottom: 24 }}>
               <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
               <Descriptions.Item label="会员卡号">32943898021309809423</Descriptions.Item>
               <Descriptions.Item label="身份证">3321944288191034921</Descriptions.Item>
               <Descriptions.Item label="联系方式">18112345678</Descriptions.Item>
-              <Descriptions.Item label="联系地址">
-                曲丽丽 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口
+              <Descriptions.Item label="联系 Address">
+                曲丽丽 18100000000 浙江省杭州市西湖区黄姑山路Shop交叉路口
               </Descriptions.Item>
             </Descriptions>
             <Descriptions style={{ marginBottom: 24 }} title="信息组">

@@ -36,7 +36,7 @@ export default {
           isLogin: false,
         },
         errorCode: '401',
-        errorMessage: '请先登录！',
+        errorMessage: 'Please Sign In',
         success: true,
       });
       return;
@@ -44,7 +44,7 @@ export default {
     res.send({
       success: true,
       data: {
-        name: 'Serati Ma',
+        name: 'Enverus User Experience',
         avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
         userid: '00000001',
         email: 'antdesign@alipay.com',
@@ -91,7 +91,7 @@ export default {
             key: '330100',
           },
         },
-        address: '西湖区工专路 77 号',
+        address: '西湖区Shop 77 号',
         phone: '0752-268888888',
       },
     });

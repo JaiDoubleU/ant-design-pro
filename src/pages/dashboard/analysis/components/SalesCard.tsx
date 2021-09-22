@@ -16,7 +16,7 @@ const { TabPane } = Tabs;
 const rankingListData: { title: string; total: number }[] = [];
 for (let i = 0; i < 7; i += 1) {
   rankingListData.push({
-    title: `工专路 ${i} 号店`,
+    title: `Shop ${i} Government Street`,
     total: 323234,
   });
 }
@@ -43,16 +43,16 @@ const SalesCard = ({
           <div className={styles.salesExtraWrap}>
             <div className={styles.salesExtra}>
               <a className={isActive('today')} onClick={() => selectDate('today')}>
-                今日
+                Today
               </a>
               <a className={isActive('week')} onClick={() => selectDate('week')}>
-                本周
+                This Week
               </a>
               <a className={isActive('month')} onClick={() => selectDate('month')}>
-                本月
+                This Month
               </a>
               <a className={isActive('year')} onClick={() => selectDate('year')}>
-                本年
+                This Year
               </a>
             </div>
             <RangePicker
@@ -65,7 +65,7 @@ const SalesCard = ({
         size="large"
         tabBarStyle={{ marginBottom: 24 }}
       >
-        <TabPane tab="销售额" key="sales">
+        <TabPane tab="Sales" key="sales">
           <Row>
             <Col xl={16} lg={12} md={12} sm={24} xs={24}>
               <div className={styles.salesBar}>
@@ -104,7 +104,7 @@ const SalesCard = ({
             </Col>
             <Col xl={8} lg={12} md={12} sm={24} xs={24}>
               <div className={styles.salesRank}>
-                <h4 className={styles.rankingTitle}>门店销售额排名</h4>
+                <h4 className={styles.rankingTitle}>Store Sales Ranking</h4>
                 <ul className={styles.rankingList}>
                   {rankingListData.map((item, i) => (
                     <li key={item.title}>
@@ -124,7 +124,7 @@ const SalesCard = ({
             </Col>
           </Row>
         </TabPane>
-        <TabPane tab="访问量" key="views">
+        <TabPane tab="Views" key="views">
           <Row>
             <Col xl={16} lg={12} md={12} sm={24} xs={24}>
               <div className={styles.salesBar}>
@@ -148,14 +148,14 @@ const SalesCard = ({
                   }}
                   title={{
                     visible: true,
-                    text: '访问量趋势',
+                    text: 'Views趋势',
                     style: {
                       fontSize: 14,
                     },
                   }}
                   meta={{
                     y: {
-                      alias: '访问量',
+                      alias: 'Views',
                     },
                   }}
                 />
@@ -163,7 +163,7 @@ const SalesCard = ({
             </Col>
             <Col xl={8} lg={12} md={12} sm={24} xs={24}>
               <div className={styles.salesRank}>
-                <h4 className={styles.rankingTitle}>门店访问量排名</h4>
+                <h4 className={styles.rankingTitle}>门店ViewsRank</h4>
                 <ul className={styles.rankingList}>
                   {rankingListData.map((item, i) => (
                     <li key={item.title}>

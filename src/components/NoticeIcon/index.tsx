@@ -141,7 +141,7 @@ const NoticeIconView = () => {
       <NoticeIcon.Tab
         tabKey="event"
         title="待办"
-        emptyText="你已完成所有待办"
+        emptyText="你已Finish所有待办"
         count={unreadMsg.event}
         list={noticeData.event}
         showViewMore

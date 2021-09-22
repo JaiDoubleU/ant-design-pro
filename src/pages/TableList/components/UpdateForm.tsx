@@ -40,7 +40,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
             destroyOnClose
             title={intl.formatMessage({
               id: 'pages.searchTable.updateForm.ruleConfig',
-              defaultMessage: '规则配置',
+              defaultMessage: 'Rule配置',
             })}
             visible={props.updateModalVisible}
             footer={submitter}
@@ -68,7 +68,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           name="name"
           label={intl.formatMessage({
             id: 'pages.searchTable.updateForm.ruleName.nameLabel',
-            defaultMessage: '规则名称',
+            defaultMessage: 'Rule名称',
           })}
           width="md"
           rules={[
@@ -77,7 +77,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
               message: (
                 <FormattedMessage
                   id="pages.searchTable.updateForm.ruleName.nameRules"
-                  defaultMessage="请输入规则名称！"
+                  defaultMessage="请输入Rule名称！"
                 />
               ),
             },
@@ -88,7 +88,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           width="md"
           label={intl.formatMessage({
             id: 'pages.searchTable.updateForm.ruleDesc.descLabel',
-            defaultMessage: '规则描述',
+            defaultMessage: 'Rule描述',
           })}
           placeholder={intl.formatMessage({
             id: 'pages.searchTable.updateForm.ruleDesc.descPlaceholder',
@@ -100,7 +100,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
               message: (
                 <FormattedMessage
                   id="pages.searchTable.updateForm.ruleDesc.descRules"
-                  defaultMessage="请输入至少五个字符的规则描述！"
+                  defaultMessage="请输入至少五个字符的Rule描述！"
                 />
               ),
               min: 5,
@@ -115,7 +115,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
         }}
         title={intl.formatMessage({
           id: 'pages.searchTable.updateForm.ruleProps.title',
-          defaultMessage: '配置规则属性',
+          defaultMessage: '配置Rule属性',
         })}
       >
         <ProFormSelect
@@ -135,18 +135,18 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           width="md"
           label={intl.formatMessage({
             id: 'pages.searchTable.updateForm.ruleProps.templateLabel',
-            defaultMessage: '规则模板',
+            defaultMessage: 'Rule模板',
           })}
           valueEnum={{
-            0: '规则模板一',
-            1: '规则模板二',
+            0: 'Rule模板一',
+            1: 'Rule模板二',
           }}
         />
         <ProFormRadio.Group
           name="type"
           label={intl.formatMessage({
             id: 'pages.searchTable.updateForm.ruleProps.typeLabel',
-            defaultMessage: '规则类型',
+            defaultMessage: 'Rule类型',
           })}
           options={[
             {

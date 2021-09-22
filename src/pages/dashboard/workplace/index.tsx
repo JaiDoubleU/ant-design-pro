@@ -67,7 +67,7 @@ const ExtraContent: FC<Record<string, any>> = () => (
       <Statistic title="项目数" value={56} />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="团队内排名" value={8} suffix="/ 24" />
+      <Statistic title="团队内Rank" value={8} suffix="/ 24" />
     </div>
     <div className={styles.statItem}>
       <Statistic title="项目访问" value={2223} />

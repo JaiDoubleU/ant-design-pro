@@ -39,7 +39,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
               padding: '32px 40px 48px',
             }}
             destroyOnClose
-            title="规则配置"
+            title="Rule配置"
             visible={props.updateModalVisible}
             footer={submitter}
             onCancel={() => {
@@ -61,24 +61,24 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
       >
         <ProFormText
           name="name"
-          label="规则名称"
+          label="Rule名称"
           width="md"
           rules={[
             {
               required: true,
-              message: '请输入规则名称！',
+              message: '请输入Rule名称！',
             },
           ]}
         />
         <ProFormTextArea
           name="desc"
           width="md"
-          label="规则描述"
+          label="Rule描述"
           placeholder="请输入至少五个字符"
           rules={[
             {
               required: true,
-              message: '请输入至少五个字符的规则描述！',
+              message: '请输入至少五个字符的Rule描述！',
               min: 5,
             },
           ]}
@@ -89,7 +89,7 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
           target: '0',
           template: '0',
         }}
-        title="配置规则属性"
+        title="配置Rule属性"
       >
         <ProFormSelect
           name="target"
@@ -103,15 +103,15 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => {
         <ProFormSelect
           name="template"
           width="md"
-          label="规则模板"
+          label="Rule模板"
           valueEnum={{
-            0: '规则模板一',
-            1: '规则模板二',
+            0: 'Rule模板一',
+            1: 'Rule模板二',
           }}
         />
         <ProFormRadio.Group
           name="type"
-          label="规则类型"
+          label="Rule类型"
           options={[
             {
               value: '0',

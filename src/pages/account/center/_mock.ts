@@ -50,9 +50,9 @@ const user = [
   '仲尼',
 ];
 
-// 当前用户信息
+// 当前User Info
 const currentUseDetail = {
-  name: 'Serati Ma',
+  name: 'Enverus User Experience',
   avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
   userid: '00000001',
   email: 'antdesign@alipay.com',
@@ -110,7 +110,7 @@ const currentUseDetail = {
       id: 'xxx3',
       title: titles[2],
       logo: avatars[2],
-      description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
+      description: 'There are so many pubs in the town, but she just walked into my pub',
       updatedAt: new Date(),
       member: '中二少女团',
       href: '',
@@ -122,7 +122,7 @@ const currentUseDetail = {
       logo: avatars[3],
       description: '那时候我只会想自己想要什么，从不想自己拥有什么',
       updatedAt: new Date('2017-07-23'),
-      member: '程序员日常',
+      member: '程序员Day常',
       href: '',
       memberLink: '',
     },
@@ -160,7 +160,7 @@ const currentUseDetail = {
       key: '330100',
     },
   },
-  address: '西湖区工专路 77 号',
+  address: '西湖区Shop 77 号',
   phone: '0752-268888888',
 };
 
@@ -229,7 +229,7 @@ function getFakeList(req: Request, res: Response) {
   });
 }
 
-// 获取用户信息
+// 获取User Info
 function getCurrentUser(req: Request, res: Response) {
   return res.json({
     data: currentUseDetail,

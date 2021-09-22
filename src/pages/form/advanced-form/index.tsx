@@ -26,18 +26,18 @@ interface TableFormDateType {
 type InternalNamePath = (string | number)[];
 
 const fieldLabels = {
-  name: '仓库名',
-  url: '仓库域名',
-  owner: '仓库管理员',
-  approver: '审批人',
-  dateRange: '生效日期',
-  type: '仓库类型',
-  name2: '任务名',
-  url2: '任务描述',
-  owner2: '执行人',
-  approver2: '责任人',
-  dateRange2: '生效日期',
-  type2: '任务类型',
+name:'Warehouse name',
+   url:'Warehouse domain name',
+   owner:'Warehouse Manager',
+   approver:'Approver',
+   dateRange:'Effective Date',
+   type:'Warehouse type',
+   name2:'Task name',
+   url2:'Task description',
+   owner2:'executor',
+   approver2:'Responsible person',
+   dateRange2:'Effective Date',
+   type2:'Task type',
 };
 
 const tableData = [
@@ -95,7 +95,7 @@ const AdvancedForm: FC<Record<string, any>> = () => {
     return (
       <span className={styles.errorIcon}>
         <Popover
-          title="表单校验信息"
+          title="Form verification information"
           content={errorList}
           overlayClassName={styles.errorPopover}
           trigger="click"
@@ -117,7 +117,7 @@ const AdvancedForm: FC<Record<string, any>> = () => {
     setError([]);
     try {
       await fakeSubmitForm(values);
-      message.success('提交成功');
+      message.success('Submitted successfully');
     } catch {
       // console.log
     }
@@ -129,25 +129,25 @@ const AdvancedForm: FC<Record<string, any>> = () => {
 
   const columns: ProColumnType<TableFormDateType>[] = [
     {
-      title: '成员姓名',
-      dataIndex: 'name',
-      key: 'name',
-      width: '20%',
-    },
+       title:'Member Name',
+       dataIndex:'name',
+       key:'name',
+       width: '20%',
+     },
+     {
+       title:'Work ID',
+       dataIndex:'workId',
+       key:'workId',
+       width: '20%',
+     },
+     {
+       title:'Department to which you belong',
+       dataIndex:'department',
+       key:'department',
+       width: '40%',
+     },
     {
-      title: '工号',
-      dataIndex: 'workId',
-      key: 'workId',
-      width: '20%',
-    },
-    {
-      title: '所属部门',
-      dataIndex: 'department',
-      key: 'department',
-      width: '40%',
-    },
-    {
-      title: '操作',
+      title: 'Operate',
       key: 'action',
       valueType: 'option',
       render: (_, record: TableFormDateType, index, action) => {
@@ -158,7 +158,7 @@ const AdvancedForm: FC<Record<string, any>> = () => {
               action?.startEditable(record.key);
             }}
           >
-            编辑
+            Edit
           </a>,
         ];
       },
@@ -183,46 +183,46 @@ const AdvancedForm: FC<Record<string, any>> = () => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      <PageContainer content="高级表单常见于一次性输入和提交大批量数据的场景。">
+      <PageContainer content="Advanced forms are commonly used in scenarios where large quantities of data are entered and submitted at one time.">
         <Card title="仓库管理" className={styles.card} bordered={false}>
           <Row gutter={16}>
             <Col lg={6} md={12} sm={24}>
               <ProFormText
                 label={fieldLabels.name}
                 name="name"
-                rules={[{ required: true, message: '请输入仓库名称' }]}
-                placeholder="请输入仓库名称"
+               rules={[{ required: true, message:'Please enter the warehouse name' }]}
+                 placeholder="Please enter the warehouse name"
               />
             </Col>
             <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
               <ProFormText
                 label={fieldLabels.url}
                 name="url"
-                rules={[{ required: true, message: '请选择' }]}
+                rules={[{ required: true, message: 'Please Select' }]}
                 fieldProps={{
                   style: { width: '100%' },
                   addonBefore: 'http://',
                   addonAfter: '.com',
                 }}
-                placeholder="请输入"
+                placeholder="Please Enter"
               />
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
               <ProFormSelect
                 label={fieldLabels.owner}
                 name="owner"
-                rules={[{ required: true, message: '请选择管理员' }]}
+                rules={[{ required: true, message: 'Please select an administrator' }]}
                 options={[
                   {
-                    label: '付晓晓',
-                    value: 'xiao',
-                  },
-                  {
-                    label: '周毛毛',
-                    value: 'mao',
-                  },
+                     label:'Fu Xiaoxiao',
+                     value:'xiao',
+                   },
+                   {
+                     label:'Zhou Mao Mao',
+                     value:'mao',
+                   },
                 ]}
-                placeholder="请选择管理员"
+                placeholder="Please select an administrator"
               />
             </Col>
           </Row>
@@ -254,7 +254,7 @@ const AdvancedForm: FC<Record<string, any>> = () => {
                     width: '100%',
                   },
                 }}
-                rules={[{ required: true, message: '请选择生效日期' }]}
+                rules={[{ required: true, message: '请选择Effective Date' }]}
               />
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>

@@ -19,7 +19,7 @@ export default {
   'menu.form.step-form': 'ステップフォーム',
   'menu.form.step-form.info': 'ステップフォーム（転送情報の書き込み）',
   'menu.form.step-form.confirm': 'ステップフォーム（転送情報の確認）',
-  'menu.form.step-form.result': 'ステップフォーム（完成）',
+  'menu.form.step-form.result': 'ステップフォーム（Finish）',
   'menu.form.advanced-form': '高度なフォーム',
   'menu.list': 'リスト',
   'menu.list.table-list': '検索テーブル',

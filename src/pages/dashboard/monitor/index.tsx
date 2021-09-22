@@ -35,19 +35,19 @@ const Monitor: FC = () => {
               <Row>
                 <Col md={6} sm={12} xs={24}>
                   <Statistic
-                    title="今日交易总额"
-                    suffix="元"
+                    title="Total Transactions of this Day"
+                    suffix="$"
                     value={numeral(124543233).format('0,0')}
                   />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
-                  <Statistic title="销售目标完成率" value="92%" />
+                  <Statistic title="Sales Target Completion Rate" value="92%" />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
-                  <Countdown title="活动剩余时间" value={deadline} format="HH:mm:ss:SSS" />
+                  <Countdown title="Activity Remaining Time" value={deadline} format="HH:mm:ss:SSS" />
                 </Col>
                 <Col md={6} sm={12} xs={24}>
-                  <Statistic title="每秒交易总额" suffix="元" value={numeral(234).format('0,0')} />
+                  <Statistic title="Transactions Per Second" suffix="$" value={numeral(234).format('0,0')} />
                 </Col>
               </Row>
               <div className={styles.mapChart}>
@@ -60,7 +60,7 @@ const Monitor: FC = () => {
               <ActiveChart />
             </Card>
             <Card
-              title="券核效率"
+              title="Voucher Core Efficiency"
               style={{ marginBottom: 24 }}
               bodyStyle={{ textAlign: 'center' }}
               bordered={false}
@@ -83,7 +83,7 @@ const Monitor: FC = () => {
         </Row>
         <Row gutter={24}>
           <Col xl={12} lg={24} sm={24} xs={24} style={{ marginBottom: 24 }}>
-            <Card title="各品类占比" bordered={false} className={styles.pieCard}>
+            <Card title="Proportion of each category" bordered={false} className={styles.pieCard}>
               <Row style={{ padding: '16px 0' }}>
                 <Col span={8}>
                   <RingProgress forceFit height={128} percent={0.28} />
@@ -107,7 +107,7 @@ const Monitor: FC = () => {
           </Col>
           <Col xl={6} lg={12} sm={24} xs={24} style={{ marginBottom: 24 }}>
             <Card
-              title="热门搜索"
+              title="Popular Searches"
               loading={loading}
               bordered={false}
               bodyStyle={{ overflow: 'hidden' }}

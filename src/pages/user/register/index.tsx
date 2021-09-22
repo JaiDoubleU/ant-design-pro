@@ -155,11 +155,11 @@ const Register: FC = () => {
           rules={[
             {
               required: true,
-              message: '请输入邮箱地址!',
+              message: '请输入邮箱 Address!',
             },
             {
               type: 'email',
-              message: '邮箱地址格式错误!',
+              message: '邮箱 Address格式错误!',
             },
           ]}
         >

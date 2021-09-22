@@ -167,7 +167,7 @@
     "/api/rule": {
       "get": {
         "tags": ["rule"],
-        "description": "获取规则列表",
+        "description": "获取Rule列表",
         "operationId": "rule",
         "parameters": [
           {
@@ -212,7 +212,7 @@
       },
       "post": {
         "tags": ["rule"],
-        "description": "新建规则",
+        "description": "新建Rule",
         "operationId": "addRule",
         "responses": {
           "200": {
@@ -239,7 +239,7 @@
       },
       "put": {
         "tags": ["rule"],
-        "description": "新建规则",
+        "description": "新建Rule",
         "operationId": "updateRule",
         "responses": {
           "200": {
@@ -266,7 +266,7 @@
       },
       "delete": {
         "tags": ["rule"],
-        "description": "删除规则",
+        "description": "删除Rule",
         "operationId": "removeRule",
         "responses": {
           "200": {

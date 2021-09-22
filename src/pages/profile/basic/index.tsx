@@ -21,7 +21,7 @@ const progressColumns: ProColumns<BasicProgress>[] = [
     key: 'rate',
   },
   {
-    title: '状态',
+    title: 'State',
     dataIndex: 'status',
     key: 'status',
     render: (text: React.ReactNode) => {
@@ -147,22 +147,22 @@ const Basic: FC = () => {
   return (
     <PageContainer>
       <Card bordered={false}>
-        <Descriptions title="退款申请" style={{ marginBottom: 32 }}>
-          <Descriptions.Item label="取货单号">1000000000</Descriptions.Item>
-          <Descriptions.Item label="状态">已取货</Descriptions.Item>
-          <Descriptions.Item label="销售单号">1234123421</Descriptions.Item>
+        <Descriptions title="Refund Application" style={{ marginBottom: 32 }}>
+          <Descriptions.Item label="Pickup Single number">1000000000</Descriptions.Item>
+          <Descriptions.Item label="State">已Pick up</Descriptions.Item>
+          <Descriptions.Item label="销售Single number">1234123421</Descriptions.Item>
           <Descriptions.Item label="子订单">3214321432</Descriptions.Item>
         </Descriptions>
         <Divider style={{ marginBottom: 32 }} />
-        <Descriptions title="用户信息" style={{ marginBottom: 32 }}>
+        <Descriptions title="User Info" style={{ marginBottom: 32 }}>
           <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
           <Descriptions.Item label="联系电话">18100000000</Descriptions.Item>
           <Descriptions.Item label="常用快递">菜鸟仓储</Descriptions.Item>
-          <Descriptions.Item label="取货地址">浙江省杭州市西湖区万塘路18号</Descriptions.Item>
-          <Descriptions.Item label="备注">无</Descriptions.Item>
+          <Descriptions.Item label="Pickup Address">浙江省杭州市西湖区万塘路18号</Descriptions.Item>
+          <Descriptions.Item label="Remarks">无</Descriptions.Item>
         </Descriptions>
         <Divider style={{ marginBottom: 32 }} />
-        <div className={styles.title}>退货商品</div>
+        <div className={styles.title}>Returned Goods</div>
         <ProTable
           style={{ marginBottom: 24 }}
           pagination={false}

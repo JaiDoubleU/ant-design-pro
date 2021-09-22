@@ -3,7 +3,7 @@ title: 业务组件
 sidemenu: false
 ---
 
-> 此功能由[dumi](https://d.umijs.org/zh-CN/guide/advanced#umi-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90%E6%A8%A1%E5%BC%8F)提供，dumi 是一个 📖 为组件开发场景而生的文档工具，用过的都说好。
+> 此功能由[dumi](https://d.umijs.org/en-US/guide/advanced#umi-%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90%E6%A8%A1%E5%BC%8F)提供，dumi 是一个 📖 为组件开发场景而生的文档工具，用过的都说好。
 
 # 业务组件
 
@@ -106,8 +106,7 @@ export default () => {
 
 ## NoticeIcon 通知工具
 
-通知工具提供一个展示多种通知信息的界面。
-
+The form page is used to collect or verify information from the user. The basic form is often used in a form scenario with few data items.
 ```tsx
 /**
  * background: '#f0f2f5'
@@ -121,14 +120,14 @@ export default () => {
     {
       id: '000000001',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-      title: '你收到了 14 份新周报',
+      title: 'You have received 14 new weekly reports',
       datetime: '2017-08-09',
       type: 'notification',
     },
     {
       id: '000000002',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png',
-      title: '你推荐的 曲妮妮 已通过第三轮面试',
+      title: 'Your recommended Qu Nini has passed the third round of interviews',
       datetime: '2017-08-08',
       type: 'notification',
     },
@@ -137,35 +136,35 @@ export default () => {
     <NoticeIcon
       count={10}
       onItemClick={(item) => {
-        message.info(`${item.title} 被点击了`);
+        message.info(`${item.title} was clicked`);
       }}
-      onClear={(title: string, key: string) => message.info('点击了清空更多')}
+      onClear={(title: string, key: string) => message.info('Click to clear more')}
       loading={false}
-      clearText="清空"
-      viewMoreText="查看更多"
-      onViewMore={() => message.info('点击了查看更多')}
+      clearText="clear"
+       viewMoreText="View more"
+       onViewMore={() => message.info('Click to see more')}
       clearClose
     >
       <NoticeIcon.Tab
         tabKey="notification"
         count={2}
         list={list}
-        title="通知"
-        emptyText="你已查看所有通知"
+       title="Notification"
+         emptyText="You have viewed all notifications"
         showViewMore
       />
       <NoticeIcon.Tab
         tabKey="message"
         count={2}
         list={list}
-        title="消息"
-        emptyText="您已读完所有消息"
+        title="Message"
+         emptyText="You have read all messages"
         showViewMore
       />
       <NoticeIcon.Tab
         tabKey="event"
-        title="待办"
-        emptyText="你已完成所有待办"
+        title="To do"
+         emptyText="You have completed all to-dos"
         count={2}
         list={list}
         showViewMore
@@ -176,37 +175,36 @@ export default () => {
 ```
 
 ### NoticeIcon API
-
-| 参数 | 说明 | 类型 | 默认值 |
+| Parameters | Description | Type | Default Value |
 | --- | --- | --- | --- |
-| count | 有多少未读通知 | `number` | - |
-| bell | 铃铛的图表 | `ReactNode` | - |
-| onClear | 点击清空数据按钮 | `(tabName: string, tabKey: string) => void` | - |
-| onItemClick | 未读消息列被点击 | `(item: API.NoticeIconData, tabProps: NoticeIconTabProps) => void` | - |
-| onViewMore | 查看更多的按钮点击 | `(tabProps: NoticeIconTabProps, e: MouseEvent) => void` | - |
-| onTabChange | 通知 Tab 的切换 | `(tabTile: string) => void;` | - |
-| popupVisible | 通知显示是否展示 | `boolean` | - |
-| onPopupVisibleChange | 通知信息显示隐藏的回调函数 | `(visible: boolean) => void` | - |
-| clearText | 清空按钮的文字 | `string` | - |
-| viewMoreText | 查看更多的按钮文字 | `string` | - |
-| clearClose | 展示清空按钮 | `boolean` | - |
-| emptyImage | 列表为空时的兜底展示 | `ReactNode` | - |
+| count | How many unread notifications | `number` |-|
+| bell | Chart of bells | `ReactNode` |-|
+| onClear | Click the clear data button | `(tabName: string, tabKey: string) => void` |-|
+| onItemClick | The unread message column is clicked | `(item: API.NoticeIconData, tabProps: NoticeIconTabProps) => void` |-|
+| onViewMore | View more button clicks | `(tabProps: NoticeIconTabProps, e: MouseEvent) => void` |-|
+| onTabChange | Notification Tab switch | `(tabTile: string) => void;` |-|
+| popupVisible | Whether to display the notification display | `boolean` |-|
+| onPopupVisibleChange | Callback function for notification information display hidden | `(visible: boolean) => void` |-|
+| clearText | Clear the text of the button | `string` |-|
+| viewMoreText | View more button text | `string` |-|
+| clearClose | Show clear button | `boolean` |-|
+| emptyImage | Bottom display when the list is empty | `ReactNode` |-|
 
 ### NoticeIcon.Tab API
 
-| 参数         | 说明               | 类型                                 | 默认值 |
-| ------------ | ------------------ | ------------------------------------ | ------ |
-| count        | 有多少未读通知     | `number`                             | -      |
-| title        | 通知 Tab 的标题    | `ReactNode`                          | -      |
-| showClear    | 展示清除按钮       | `boolean`                            | `true` |
-| showViewMore | 展示加载更         | `boolean`                            | `true` |
-| tabKey       | Tab 的唯一 key     | `string`                             | -      |
-| onClick      | 子项的单击事件     | `(item: API.NoticeIconData) => void` | -      |
-| onClear      | 清楚按钮的点击     | `()=>void`                           | -      |
-| emptyText    | 为空的时候测试     | `()=>void`                           | -      |
-| viewMoreText | 查看更多的按钮文字 | `string`                             | -      |
-| onViewMore   | 查看更多的按钮点击 | `( e: MouseEvent) => void`           | -      |
-| list         | 通知信息的列表     | `API.NoticeIconData`                 | -      |
+| Parameters | Description | Type | Default Value |
+| ------------ | ------------------ | ----------------- ------------------- | ------ |
+| count | How many unread notifications | `number` |-|
+| title | Title of the notification Tab | `ReactNode` |-|
+| showClear | Show clear button | `boolean` | `true` |
+| showViewMore | Show loading update | `boolean` | `true` |
+| tabKey | Tab's unique key | `string` |-|
+| onClick | Click event of child | `(item: API.NoticeIconData) => void` |-|
+| onClear | Click on the clear button | `()=>void` |-|
+| emptyText | Test when it is empty | `()=>void` |-|
+| viewMoreText | View more button text | `string` |-|
+| onViewMore | View more button clicks | `( e: MouseEvent) => void` |-|
+| list | List of notification information | `API.NoticeIconData` |-|
 
 ### NoticeIconData
 

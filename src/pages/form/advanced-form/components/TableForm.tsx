@@ -33,7 +33,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
     const newData = data?.map((item) => ({ ...item }));
     const target = getRowByKey(key, newData);
     if (target) {
-      // 进入编辑状态时保存原始数据
+      // 进入编辑State时保存原始数据
       if (!target.editable) {
         cacheOriginData[key] = { ...target };
         setCacheOriginData(cacheOriginData);

@@ -199,11 +199,11 @@ const BaseView: React.FC = () => {
               <ProFormText
                 width="md"
                 name="address"
-                label="街道地址"
+                label="街道 Address"
                 rules={[
                   {
                     required: true,
-                    message: '请输入您的街道地址!',
+                    message: '请输入您的街道 Address!',
                   },
                 ]}
               />

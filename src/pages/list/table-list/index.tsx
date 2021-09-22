@@ -92,9 +92,9 @@ const TableList: React.FC = () => {
 
   const columns: ProColumns<TableListItem>[] = [
     {
-      title: '规则名称',
+      title: 'Rule名称',
       dataIndex: 'name',
-      tip: '规则名称是唯一的 key',
+      tip: 'Rule名称是唯一的 key',
       render: (dom, entity) => {
         return (
           <a
@@ -114,14 +114,14 @@ const TableList: React.FC = () => {
       valueType: 'textarea',
     },
     {
-      title: '服务调用次数',
+      title: 'Service调用次数',
       dataIndex: 'callNo',
       sorter: true,
       hideInForm: true,
       renderText: (val: string) => `${val}万`,
     },
     {
-      title: '状态',
+      title: 'State',
       dataIndex: 'status',
       hideInForm: true,
       valueEnum: {
@@ -225,7 +225,7 @@ const TableList: React.FC = () => {
               </a>{' '}
               项 &nbsp;&nbsp;
               <span>
-                服务调用次数总计 {selectedRowsState.reduce((pre, item) => pre + item.callNo!, 0)} 万
+                Service调用次数总计 {selectedRowsState.reduce((pre, item) => pre + item.callNo!, 0)} 万
               </span>
             </div>
           }
@@ -243,7 +243,7 @@ const TableList: React.FC = () => {
         </FooterToolbar>
       )}
       <ModalForm
-        title="新建规则"
+        title="新建Rule"
         width="400px"
         visible={createModalVisible}
         onVisibleChange={handleModalVisible}
@@ -261,7 +261,7 @@ const TableList: React.FC = () => {
           rules={[
             {
               required: true,
-              message: '规则名称为必填项',
+              message: 'Rule名称为必填项',
             },
           ]}
           width="md"

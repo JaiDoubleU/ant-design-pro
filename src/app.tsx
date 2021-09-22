@@ -10,13 +10,13 @@ import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
 
-/** 获取用户信息比较慢的时候会展示一个 loading */
+/** 获取User Info比较慢的时候会展示一个 loading */
 export const initialStateConfig = {
   loading: <PageLoading />,
 };
 
 /**
- * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
+ * @see  https://umijs.org/en-US/plugins/plugin-initial-state
  * */
 export async function getInitialState(): Promise<{
   settings?: Partial<LayoutSettings>;
@@ -71,7 +71,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
           </Link>,
           <Link to="/~docs">
             <BookOutlined />
-            <span>业务组件文档</span>
+            <span>Business Component Documentation</span>
           </Link>,
         ]
       : [],

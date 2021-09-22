@@ -96,12 +96,12 @@ const TagList: React.FC<{ tags: CurrentUser['tags'] }> = ({ tags }) => {
 const Center: React.FC<RouteChildrenProps> = () => {
   const [tabKey, setTabKey] = useState<tabKeyType>('articles');
 
-  //  获取用户信息
+  //  获取User Info
   const { data: currentUser, loading } = useRequest(() => {
     return queryCurrent();
   });
 
-  //  渲染用户信息
+  //  渲染User Info
   const renderUserInfo = ({ title, group, geographic }: Partial<CurrentUser>) => {
     return (
       <div className={styles.detail}>

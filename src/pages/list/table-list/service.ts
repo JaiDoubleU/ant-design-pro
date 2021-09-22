@@ -3,7 +3,7 @@
 import { request } from 'umi';
 import { TableListItem } from './data';
 
-/** 获取规则列表 GET /api/rule */
+/** 获取Rule列表 GET /api/rule */
 export async function rule(
   params: {
     // query
@@ -28,7 +28,7 @@ export async function rule(
   });
 }
 
-/** 新建规则 PUT /api/rule */
+/** 新建Rule PUT /api/rule */
 export async function updateRule(data: { [key: string]: any }, options?: { [key: string]: any }) {
   return request<TableListItem>('/api/rule', {
     data,
@@ -37,7 +37,7 @@ export async function updateRule(data: { [key: string]: any }, options?: { [key:
   });
 }
 
-/** 新建规则 POST /api/rule */
+/** 新建Rule POST /api/rule */
 export async function addRule(data: { [key: string]: any }, options?: { [key: string]: any }) {
   return request<TableListItem>('/api/rule', {
     data,
@@ -46,7 +46,7 @@ export async function addRule(data: { [key: string]: any }, options?: { [key: st
   });
 }
 
-/** 删除规则 DELETE /api/rule */
+/** 删除Rule DELETE /api/rule */
 export async function removeRule(data: { key: number[] }, options?: { [key: string]: any }) {
   return request<Record<string, any>>('/api/rule', {
     data,

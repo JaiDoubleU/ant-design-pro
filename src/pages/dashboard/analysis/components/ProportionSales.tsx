@@ -26,7 +26,7 @@ const ProportionSales = ({
     loading={loading}
     className={styles.salesCard}
     bordered={false}
-    title="销售额类别占比"
+    title="Percentage of Sales Category"
     style={{
       height: '100%',
     }}
@@ -44,7 +44,7 @@ const ProportionSales = ({
     }
   >
     <div>
-      <Text>销售额</Text>
+      <Text>Sales</Text>
       <Donut
         forceFit
         height={340}
@@ -65,7 +65,7 @@ const ProportionSales = ({
         }}
         statistic={
           {
-            totalLabel: '销售额',
+            totalLabel: 'Sales',
           } as DonutConfig['statistic']
         }
       />

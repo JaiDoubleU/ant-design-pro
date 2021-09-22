@@ -34,7 +34,7 @@ const searchData: SearchDataType[] = [];
 for (let i = 0; i < 50; i += 1) {
   searchData.push({
     index: i + 1,
-    keyword: `搜索关键词-${i}`,
+    keyword: `Keyword-${i}`,
     count: Math.floor(Math.random() * 1000),
     range: Math.floor(Math.random() * 100),
     status: Math.floor((Math.random() * 10) % 2),
@@ -194,7 +194,7 @@ const getNotice = (_: Request, res: Response) => {
         id: 'xxx3',
         title: titles[2],
         logo: avatars[2],
-        description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
+        description: 'There are so many pubs in the town, but she just walked into my pub',
         updatedAt: new Date(),
         member: '中二少女团',
         href: '',
@@ -206,7 +206,7 @@ const getNotice = (_: Request, res: Response) => {
         logo: avatars[3],
         description: '那时候我只会想自己想要什么，从不想自己拥有什么',
         updatedAt: new Date('2017-07-23'),
-        member: '程序员日常',
+        member: '程序员Day常',
         href: '',
         memberLink: '',
       },
@@ -296,10 +296,10 @@ const getActivities = (_: Request, res: Response) => {
           avatar: avatars2[4],
         },
         project: {
-          name: '5 月日常迭代',
+          name: '5 月Day常迭代',
           link: 'http://github.com/',
         },
-        template: '将 @{project} 更新至已发布状态',
+        template: '将 @{project} 更新至已发布State',
       },
       {
         id: 'trend-5',
@@ -326,7 +326,7 @@ const getActivities = (_: Request, res: Response) => {
           avatar: avatars2[5],
         },
         group: {
-          name: '程序员日常',
+          name: '程序员Day常',
           link: 'http://github.com/',
         },
         project: {

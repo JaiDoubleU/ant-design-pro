@@ -19,7 +19,7 @@ function getCity(req: Request, res: Response) {
 function getCurrentUse(req: Request, res: Response) {
   return res.json({
     data: {
-      name: 'Serati Ma',
+      name: 'Enverus User Experience',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
       userid: '00000001',
       email: 'antdesign@alipay.com',
@@ -65,7 +65,7 @@ function getCurrentUse(req: Request, res: Response) {
           key: '330100',
         },
       },
-      address: '西湖区工专路 77 号',
+      address: '西湖区Shop 77 号',
       phone: '0752-268888888',
     },
   });

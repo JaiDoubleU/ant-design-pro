@@ -59,15 +59,15 @@ export default class ActiveChart extends Component {
 
     return (
       <div className={styles.activeChart}>
-        <Statistic title="目标评估" value="有望达到预期" />
+        <Statistic title="Goal Evaluation" value="Expected to meet  goal" />
         <div style={{ marginTop: 32 }}>
           <TinyArea data={activeData} xField="x" forceFit yField="y" height={84} />
         </div>
         {activeData && (
           <div>
             <div className={styles.activeChartGrid}>
-              <p>{[...activeData].sort()[activeData.length - 1].y + 200} 亿元</p>
-              <p>{[...activeData].sort()[Math.floor(activeData.length / 2)].y} 亿元</p>
+              <p>{[...activeData].sort()[activeData.length - 1].y + 200} 亿$</p>
+              <p>{[...activeData].sort()[Math.floor(activeData.length / 2)].y} 亿$</p>
             </div>
             <div className={styles.dashedLine}>
               <div className={styles.line} />
